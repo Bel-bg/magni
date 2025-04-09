@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
+body {
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #002fff, #0177f4, #f70646, #6818f3, #d70e6c);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+}
+@keyframes gradient {
+    0% {
+         background-position: 0% 50%; 
+        }
+    50% {
+         background-position: 100% 50%; 
+        }
+    100% {
+         background-position: 0% 50%; 
+        }
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#annif {
+    text-align: center;
+    background-color: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+}
+#annif .h1 {
+    font-weight: 200px;
+    height: 10em;
+    overflow: hidden;
+    font-size: 3em;
+    color: #fdfd03;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#annif .h1 span {
+    font-size: 0.8em;
+    color: #ffdd01;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.transition {
+    display: inline-block;
+    height: 1em;
+    overflow: hidden;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.transition span {
+    display: block;
+    animation: slideWords 5s infinite;
+}
+
+@keyframes slideWords {
+    0% { transform: translateY(0%); }
+    14.28% { transform: translateY(-100%); }
+    28.56% { transform: translateY(-200%); }
+    42.84% { transform: translateY(-300%); }
+    57.12% { transform: translateY(-400%); }
+    71.40% { transform: translateY(-500%); }
+    85.68% { transform: translateY(-600%); }
+    100% { transform: translateY(0%); }
+}
+#annif img {
+    width: 300px; 
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 20px;
+}
+footer {
+    text-align: center;
+    background-color: none;
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+}
+footer img {
+    width: 400px; 
+    height: 400px;
+    border-radius: 50%;
+    border: none;
+    margin-bottom: 20px;
+}
+footer .p {
+    font-size: 0.8em;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+footer .h6 {
+    font-size: 0.8em;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* Pour les écrans mobiles */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px; /* Réduit la taille de police pour mobile */
+    }
+
+    #annif .h1 {
+        font-size: 2em; /* Taille du texte plus petite sur mobile */
+        height: auto; /* Pas besoin de contrainte de hauteur */
+    }
+
+    #annif img {
+        width: 150px; /* Réduit la taille de l'image */
+        height: 150px;
+    }
+
+    footer img {
+        width: 200px; /* Réduit la taille de l'image du footer */
+        height: 200px;
+    }
+
+    footer {
+        font-size: 1em; /* Réduit la taille de la police du footer */
+    }
+
+    .transition span {
+        font-size: 0.7em; 
+    }
+}
+
+/* Pour les tablettes en mode paysage (au-dessus de 768px mais moins de 1024px) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 16px; 
+    }
+
+    #annif .h1 {
+        font-size: 2.5em;
+    }
+
+    footer img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .transition span {
+        font-size: 0.9em; /
+    }
+}
+
+/* Pour les grands écrans desktop (au-dessus de 1024px) */
+@media (min-width: 1025px) {
+    html {
+        font-size: 18px;
+    }
+
+    #annif .h1 {
+        font-size: 3em; 
+    }
+
+    footer img {
+        width: 400px; 
+        height: 400px;
+    }
+}
